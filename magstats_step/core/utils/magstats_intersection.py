@@ -2,7 +2,7 @@ from typing import List
 from .compose import compose
 from ..calculators import *
 
-CALCULATORS_LIST = ["ra", "dec", "mjd", "ndet", "dmdt", "stellar"]
+CALCULATORS_LIST = ["ra", "dec", "mjd", "ndet", "dmdt", "stellar", "magnitude"]
 
 def magstats_intersection(excluded_calculators: List[str]):
     calculators = {
@@ -11,6 +11,7 @@ def magstats_intersection(excluded_calculators: List[str]):
         "mjd": calculate_mjd,
         "ndet": calculate_ndet,
         "dmdt": calculate_dmdt,
+        "magnitude": calculate_magnitude_statistics,
         "stellar": calculate_stellar
     }
 

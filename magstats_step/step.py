@@ -37,6 +37,7 @@ class MagstatsStep(GenericStep):
 
     def compute_magstats(self, alerts):
         objects = []
+        #TODO: Refactor the dataframe usage to improve performance
         for object_dict in alerts:
             detections = generate_detections_dataframe(object_dict["detections"])
             non_detections = generate_non_detections_dataframe(object_dict["non_detections"])

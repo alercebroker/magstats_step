@@ -41,6 +41,8 @@ def test_magstats_calculators_composition():
     assert alerce_object.sigmara is not None
     assert alerce_object.meandec is not None
     assert alerce_object.sigmadec is not None
+    assert alerce_object.firstmjd is not None
+    assert alerce_object.lastmjd is not None
     assert alerce_object.ndet is not None
 
 
